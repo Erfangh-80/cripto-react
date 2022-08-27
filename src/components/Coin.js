@@ -1,9 +1,11 @@
 import React from 'react';
 
 // styles
-import styles from "./Coin.module.css";
+import styles from "../assets/styles/Coin.module.css";
 
 const Coin = ({name, image, symbol, price, marketCap, priceChange}) => {
+    
+
     return (
         <div className={styles.container}>
             <img className={styles.image} src={image} alt={name} />

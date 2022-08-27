@@ -7,7 +7,8 @@ import Loader from "./Loader.js";
 import Coin from "./Coin";
 
 // styles
-import styles from "./Landing.module.css"
+import styles from "../assets/styles/Landing.module.css"
+import Pagination from "./Pagination";
 
 const Landing = () => {
   const [search, setSearch] = useState("");
@@ -15,15 +16,22 @@ const Landing = () => {
 
   useEffect(() => {
     const fetchAPI = async () => {
-      setCoins(await getCrypto());
+      const data = await getCrypto(1)
+      setCoins(data);
     };
-
     fetchAPI();
   }, []);
-
+  
+  
   const searchHandler = (event) => {
     setSearch(event.target.value)
   }
+
+  const getLimitCoin = async (data) => {
+    setCoins(await getCrypto(data))
+    window.scrollTo(0,0)
+  }
+
   const newSearch = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
@@ -48,6 +56,7 @@ const Landing = () => {
           <Loader />
         )}
       </div>
+      <Pagination getLimitCoin={getLimitCoin}/>
     </>
   );
 };

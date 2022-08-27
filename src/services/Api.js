@@ -1,9 +1,9 @@
 import axios from "axios"
 
-const BASE_URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+const BASE_URL = "https://api.coingecko.com/api/v3/coins/markets"
 
-const getCrypto = async () => {
-    const response = await axios.get(`${BASE_URL}`);
+const getCrypto = async (pageNumber) => {
+    const response = await axios.get(`${BASE_URL}?vs_currency=usd&order=market_cap_desc&per_page=30&page=${pageNumber}&sparkline=false`);
     return response.data
 }
 
