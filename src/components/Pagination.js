@@ -19,12 +19,11 @@ const Pagination = (props) => {
                 breakLabel="..."
                 nextLabel="next"
                 onPageChange={clickHandler}
-                containerClassName="pagination container"
-                pageClassName="page-number"
+                containerClassName="pagination"
                 pageLinkClassName="page-link"
-                breakClassName="breakPage"
-                previousClassName="previous-item"
-                nextClassName="next-item"
+                previousLinkClassName="page-link"
+                nextLinkClassName="page-link"
+                activeLinkClassName="active"
             />
         </div>
     );
