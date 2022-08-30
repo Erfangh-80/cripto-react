@@ -23,3 +23,10 @@
   background: white;
   box-shadow: rgba(74, 74, 74, 0.24) 0px 3px 8px;
 }
+
+@media (max-width: 768px){
+  .coinContainer{
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
