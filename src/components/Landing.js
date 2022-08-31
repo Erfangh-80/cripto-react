@@ -9,6 +9,7 @@ import Coin from "./Coin";
 // styles
 import styles from "../assets/styles/Landing.module.css"
 import Pagination from "./Pagination";
+import Title from "./template/Title";
 
 const Landing = () => {
   const [search, setSearch] = useState("");
@@ -38,6 +39,7 @@ const Landing = () => {
     <>
       <input className={styles.input} type="text" value={search} onChange={searchHandler} placeholder="search....." />
       <div className={styles.coinContainer}>
+        <Title />
         {coins.length ? (
           <div>
             {newSearch.map((coin) => (
