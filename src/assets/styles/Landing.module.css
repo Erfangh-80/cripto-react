@@ -1,20 +1,21 @@
 .coinContainer {
   margin: 50px auto;
-  border: 1px solid silver;
-  border-radius: 10px;
   width: fit-content;
-  background-color: #f6f6f6;
 }
 
 .input {
   width: 300px;
-  margin-top: 50px;
+  margin-top: 100px;
   border: 1px solid silver;
   border-radius: 5px;
   height: 20px;
   padding: 15px;
-  background-color: #f6f6f6;
+  background-color: transparent;
   transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: #fff;
 }
 
 .input:focus {
@@ -24,8 +25,8 @@
   box-shadow: rgba(74, 74, 74, 0.24) 0px 3px 8px;
 }
 
-@media (max-width: 768px){
-  .coinContainer{
+@media (max-width: 768px) {
+  .coinContainer {
     width: 100%;
     overflow-x: scroll;
   }
