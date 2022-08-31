@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7rem;
+    height: 65px;
+    background-color: #14161a;
+    box-shadow: 0px 7px 11px 6px rgba(0,0,0,0.39);
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    color: #ecdc55;
+    font-size: 1.2rem;
+}
+
+.dropDown{
+    width: 100px;
+}
+
+.dropDown select{
+    width: 100%;
+    background: #14161a;
+    color: #fff;
+    border: 1px solid #2c303a;
+    padding: 5px 5px;
+    position: relative;
+}
+
