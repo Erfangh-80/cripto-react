@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 // API
 import { getCrypto } from "../services/Api";
 // components
 import Loader from "./Loader.js";
 import Coin from "./Coin";
-
+// context
+import { CryptoContext } from "../context/CryptoContextProvider.js"
 // styles
 import styles from "../assets/styles/Landing.module.css"
 import Pagination from "./Pagination";
@@ -15,13 +16,15 @@ const Landing = () => {
   const [search, setSearch] = useState("");
   const [coins, setCoins] = useState([]);
 
+  const { currency } = useContext(CryptoContext)
+
   useEffect(() => {
     const fetchAPI = async () => {
-      const data = await getCrypto(1)
+      const data = await getCrypto(currency, 1)
       setCoins(data);
     };
     fetchAPI();
-  }, []);
+  }, [currency]);
   
   
   const searchHandler = (event) => {
@@ -47,7 +50,7 @@ const Landing = () => {
                 key={coin.id}
                 name={coin.name}
                 image={coin.image}
-                symbol={coin.symbol}
+                symbolName={coin.symbol}
                 price={coin.current_price}
                 marketCap={coin.market_cap}
                 priceChange={coin.market_cap_change_percentage_24h}
