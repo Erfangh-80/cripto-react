@@ -13,9 +13,9 @@ const Pagination = (props) => {
     return (
         <div>
             <ReactPaginate
-                pageCount={38}
+                pageCount={8}
                 pageRangeDisplayed={3}
-                previousLabel="previous"
+                previousLabel="prev"
                 breakLabel="..."
                 nextLabel="next"
                 onPageChange={clickHandler}
