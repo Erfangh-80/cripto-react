@@ -32,7 +32,7 @@ const Landing = () => {
   }
 
   const getLimitCoin = async (data) => {
-    setCoins(await getCrypto(data))
+    setCoins(await getCrypto(currency, data))
     window.scrollTo(0,0)
   }
 
@@ -48,6 +48,7 @@ const Landing = () => {
             {newSearch.map((coin) => (
               <Coin
                 key={coin.id}
+                rank={coin.market_cap_rank}
                 name={coin.name}
                 image={coin.image}
                 symbolName={coin.symbol}
