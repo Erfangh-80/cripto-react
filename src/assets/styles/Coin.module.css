@@ -63,3 +63,9 @@
 .greenPriceChange {
   color: rgb(0, 204, 0);
 }
+
+@media (max-width: 768px){
+  .container{
+    margin: 0px auto 1rem auto;
+  }
+}

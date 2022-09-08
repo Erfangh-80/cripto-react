@@ -37,3 +37,9 @@
   text-align: left;
   font-weight: bold;
 }
+
+@media (max-width: 768px){
+  .container{
+    margin: 0px auto ;
+  }
+}
