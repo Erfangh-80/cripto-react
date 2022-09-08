@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import { Link } from "react-router-dom";
 //  styles
 import styles from "../../assets/styles/Navbar.module.css";
 
@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <h3>Crypto Hunter</h3>
+        <Link to="/">Crypto Hunter</Link>
       </div>
       <div className={styles.dropDown}>
         <select value={currency} onChange={(event) => setCurrency(event.target.value)}>

@@ -12,8 +12,11 @@
 }
 
 .logo{
-    color: #ecdc55;
     font-size: 1.2rem;
+}
+
+.logo a{
+    color: #ecdc55;
 }
 
 .dropDown{
@@ -31,6 +34,6 @@
 
 @media (max-width: 768px){
     .container{
-        padding: 1rem 2rem;
+        padding: 1rem 0.8rem;
     }
 }
