@@ -3,4 +3,15 @@
     border: 1px solid #ecdc55;
     color: #fff;
     padding: 0.3rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #a29b56;
+}
+
+.button:active{
+    color: #9d6b00;
 }

@@ -1,0 +1,31 @@
+.container{
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1rem 0px 1rem;
+}
+
+.button{
+    margin-top: 3rem;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 968px){
+    .container{
+        width: 90%;
+        padding: none;
+        margin: auto;
+    }
+}
+
+@media (max-width: 468px){
+    .container{
+        width: 100%;
+    }
+}
