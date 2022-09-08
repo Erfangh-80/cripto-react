@@ -1,0 +1,77 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 30%;
+    padding: 5rem 1.5rem 0px 1.5rem;
+    border-right: 1px solid #fff;
+}
+
+.name{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.name img{
+    width: 210px;
+    margin-bottom: 1rem;
+}
+
+.description{
+    color: #fff ;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.description a{
+    color: #ecdc55;
+}
+
+.rank, .currentPrice, .marketCap{
+    margin-bottom: 1rem;
+    display: flex;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+}
+
+.rank span{
+    margin-left: 5px;
+    color: #ecdc55;
+}
+
+.currentPrice span{
+    margin-left: 5px;
+    color: #ecdc55;
+}
+
+.marketCap span{
+    margin-left: 5px;
+    color: #ecdc55;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 70%;
+        margin: auto;
+        border: none;
+    }
+}
+
+
+@media (max-width: 480px){
+    .container{
+        width: 100%;
+    }
+
+    .name img{
+        width: 150px;
+    }
+    
+}
